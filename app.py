@@ -1,18 +1,18 @@
 import streamlit as st
 
-# Настройка на страницата на пълен екран
+# Настройка на заглавието и оформлението на страницата
 st.set_page_config(
-    page_title="Складова Наличност", page_icon="📦", layout="wide"
+    page_title="Складова Наличност",
+    page_icon="📦",
+    layout="wide"
 )
 
+# Заглавие на приложението
 st.title("📦 Онлайн Складова Наличност")
-st.write(
-    "Тук можете да преглеждате и редактирате складовата наличност в реално време."
-)
+st.write("Тук можете да преглеждате и редактирате складовата наличност в реално време. Всички направени промени се запазват автоматично.")
 
-# ⚠️ ЗАМЕНЕТЕ ТАЗИ ВРЪЗКА С ВАШАТА ВРЪЗКА ОТ GOOGLE SHEETS
-# Уверете се, че накрая завършва на /edit?rm=embedded
-GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/ВАШИЯ_ID_ТУК/edit?rm=embedded"
+# Точен линк към вашата Google Таблица за вграждане
+GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/1qKUg1jWk5BbxI1Rt9JAGGXF8MXYnMX52X5yx2c-xyIw/edit?gid=1779602527&rm=embedded"
 
-# Визуализиране на онлайн таблицата вътре в сайта
-st.components.v1.iframe(GOOGLE_SHEET_URL, height=750, scrolling=True)
+# Визуализация на таблицата в уеб страницата
+st.components.v1.iframe(GOOGLE_SHEET_URL, height=800, scrolling=True)
